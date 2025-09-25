@@ -1,6 +1,6 @@
 name: Concurrency
 on: [push] #triggers
-Concurrency:
+concurrency:
   #this workflow should be triggered for any branch only once
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true #existing will be cancelled and latest will run
